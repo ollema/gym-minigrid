@@ -106,6 +106,9 @@ class Renderer:
         self.window = None
         if ownWindow:
             self.app = QApplication([])
+
+            # Enable High DPI Scaling
+            self.app.setAttribute(Qt.AA_EnableHighDpiScaling)
             self.window = Window()
 
     def close(self):
